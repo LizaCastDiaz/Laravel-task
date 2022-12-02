@@ -19,24 +19,31 @@ Route::get('/tasks', function (){
     return 'Welcome to my tasks Application';
 
 });
-
-Route::put('/tasks', function (){
-    return 'update tasks Application';
+// we need the id
+Route::put('/tasks/{id}', function ($id){
+    return 'update tasks: '.$id;
 
 });
-
+//to make a post we need a body
 Route::post('/tasks', function (){
-    return 'Welcome to my tasks Application';
+    return 'Create tasks';
+
+});
+//DELETE TASK
+Route::delete('/tasks/{id}', function ($id){
+    return 'Delete tasks: '.$id;
 
 });
 
-Route::delete('/tasks', function (){
-    return 'Delete my tasks Application';
-
-});
-
-
+//GET ALL
 Route::get('/tasks', function (){
     return 'Get my tasks Application';
 
 });
+
+//get only one task
+Route::get('/tasks/{id}', function ($id){
+    return 'Get my tasks Application: '.$id;
+
+});
+
