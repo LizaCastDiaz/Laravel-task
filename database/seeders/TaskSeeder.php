@@ -18,12 +18,21 @@ class TaskSeeder extends Seeder
     {
         DB::table('tasks')->insert([ //crear unos campos --- hay q me meter el created add en caso de que no se creen con fecha.
             //se lanza con php artisan db:seed --class=UserSeeder
-            'name' => 'compar',
+
+            [ 'name' => 'compar',
             'description' => 'patatas',
             'status' => false,
+            ],
+
+            [
+            'name' => 'vender',
+            'description' => 'patatas',
+            'status' => false,
+            ]
 
 
 
-        ]);
+        ]
+    );
     }
 }
